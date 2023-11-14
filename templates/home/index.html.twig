@@ -7,4 +7,16 @@
     <h1>Bienvenue sur la Photothèque de Chatons</h1>
     <p>Version fichier</p>
 
+    <ul>
+    
+        {% for dossier in dossiers %}
+            <li>
+                <a href="{{ path('app_dossier', {'nomDuDossier': dossier.filename}) }}">
+                    {{ dossier }}
+                </a>
+            </li>
+        {% endfor %}
+
+    </ul>
+
 {% endblock %}
