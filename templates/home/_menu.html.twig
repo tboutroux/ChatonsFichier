@@ -1,0 +1,5 @@
+{% for dossier in dossiers %}
+    <li class="nav-item">
+        <a href="{{ path("app_dossier", {"nomDuDossier": dossier.filename}) }}">{{ dossier.filename }}</a>
+    </li>
+{% endfor %}

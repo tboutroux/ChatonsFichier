@@ -12,7 +12,7 @@
         {% for dossier in dossiers %}
             <li>
                 <a href="{{ path('app_dossier', {'nomDuDossier': dossier.filename}) }}">
-                    {{ dossier }}
+                    {{ dossier.filename }}
                 </a>
             </li>
         {% endfor %}

@@ -20,4 +20,16 @@ class HomeController extends AbstractController
             'dossiers' => $finder,
         ]);
     }
+
+    public function menu(): Response
+    {
+
+        $finder = new Finder();
+        $finder->directories()->in('Pictures');
+
+        return $this->render('home/_menu.html.twig', [
+            'dossiers' => $finder,
+        ]);
+    }
+
 }
